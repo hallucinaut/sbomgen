@@ -13,6 +13,7 @@ import (
 
 // Analyzer interface for extracting dependencies from different package managers.
 type Analyzer interface {
+	ShouldAnalyze(path string) bool
 	Name() string
 	Analyze(path string) ([]sbom.Component, error)
 }

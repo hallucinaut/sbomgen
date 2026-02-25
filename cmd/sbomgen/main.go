@@ -121,13 +121,13 @@ func generate(args []string) error {
 		gen.AddComponent(comp)
 	}
 	
-	var fmt formatter.Formatter
+	var instance formatter.Formatter
 	if outputFormat == "" {
 		outputFormat = "json"
 	}
-	fmt = formatter.GetFormatter(formatter.Format(outputFormat))
+	instance = formatter.GetFormatter(formatter.Format(outputFormat))
 	
-	output, err := fmt.Format(gen)
+	output, err := instance.Format(gen)
 	if err != nil {
 		return fmt.Errorf("failed to format output: %w", err)
 	}
