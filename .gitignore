@@ -1,9 +1,14 @@
 # Binaries
 sbomgen
+sbomgen.exe
 *.exe
 
 # Test binaries
 *.test
+
+# Ignore cmd and pkg
+!cmd/**
+!pkg/**
 
 # Coverage
 *.out
