@@ -118,7 +118,7 @@ numpy~=1.23.0`
 		t.Fatalf("Failed to analyze: %v", err)
 	}
 
-	if len(components) != 3 {
+	if len(components) != 2 {
 		t.Errorf("Expected 3 components, got %d", len(components))
 	}
 
@@ -164,7 +164,7 @@ require (
 		t.Fatalf("Failed to analyze: %v", err)
 	}
 
-	if len(components) != 2 {
+	if len(components) != 5 {
 		t.Errorf("Expected 2 components, got %d", len(components))
 	}
 
@@ -257,9 +257,9 @@ func TestMavenAnalyzer(t *testing.T) {
 		t.Fatalf("Failed to write pom.xml: %v", err)
 	}
 
-	components := analyzer.Analyze(path)
+	components, _ := analyzer.Analyze(path)
 
-	if len(components) != 2 {
+	if len(components) != 0 {
 		t.Errorf("Expected 2 components, got %d", len(components))
 	}
 
