@@ -19,15 +19,6 @@ Generate SBOMs in multiple formats (SPDX, CycloneDX, JSON, YAML, Markdown) for s
 
 ## 📦 Installation
 
-### Download Binary
-
-```bash
-# Download from releases
-curl -LO https://github.com/hallucinaut/sbomgen/releases/download/v1.0.0/sbomgen-linux-amd64
-chmod +x sbomgen-linux-amd64
-sudo mv sbomgen-linux-amd64 /usr/local/bin/sbomgen
-```
-
 ### Build from Source
 
 ```bash
